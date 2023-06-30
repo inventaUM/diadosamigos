@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feliz dia dos Namorados</title>
+
+    <style>
+        body{
+          background-color: #c40094;
+        }
+
+         .painel{
+            margin: auto;
+            background-color: #fff;
+            width: 500px;
+            height: 500px;
+            border-radius: 20px;
+            text-align: center;
+            padding-top: 30px;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+         }
+         #sim{
+          height: 50px;
+          width: 70px;
+          background-color: #c40094; border: 2px solid #fff;
+          outline: none;
+          border-radius: 6px;
+          box-shadow:  0 0 10px #c40094;
+          font-size: 18px;
+          color: #fff;
+          letter-spacing: 1px;
+          font-family: Georgia, 'Times New Roman', Times, serif;
+          cursor: pointer;
+          margin-left: -120px;
+          transition: 5.s;
+         }
+
+         #nao{
+          position: absolute;
+          height: 50px;
+          width: 70px;
+          background-color: #c40094; border: 2px solid #fff;
+          outline: none;
+          border-radius: 6px;
+          box-shadow:  0 0 10px #c40094;
+          font-size: 18px;
+          color: #fff;
+          letter-spacing: 1px;
+          font-family: Georgia, 'Times New Roman', Times, serif;
+          cursor: pointer;
+          margin-left: 50px;
+         }
+
+    </style>
+
+</head>
+<body>
+
+    <div class="painel">
+        <h1>Feliz dia dos amigos</h1>
+        
+
+        <img src="https://th.bing.com/th?id=OIP.ZBpYTAU0XHM-jl2U-QblPAAAAA&w=251&h=212&c=8&rs=1&qlt=90&o=6&pid=3.1&rm=2" alt="">
+
+
+
+        <h3>Aceita limpar a minha casa?</h3>
+
+        
+        <a href="https://www.youtube.com/watch?v=oRvND-r57Us"><button id="sim"> Sim! </button></a>
+        <button onmouseover="fuja()" id="nao"> Não:/ </button>
+
+    </div>
+
+    <script>
+        function fuja(){
+            var botaoNao = document.getElementById("nao")
+
+            var largurajanela = window.innerWidth;
+            var alturajanela = window.innerHeight;
+
+            var maxX = largurajanela - botaoNao.offsetWidth;
+            var maxY = alturajanela - botaoNao.offsetHeight;
+
+             var aleatorioX = Math.floor(Math.random() * maxX);
+             var aleatorioY = Math.floor(Math.random() * maxY);
+
+             botaoNao.style.left = aleatorioX + "px";
+             botaoNao.style.top = aleatorioY + "px";
+
+        }
+    </script>
+
+
+
+    
+</body>
+</html>
